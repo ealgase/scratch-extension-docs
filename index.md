@@ -348,6 +348,7 @@ The full list of block types available to an extension is as follows. Note that 
 | `'w'`   | Asynchronous command
 | `'r'`   | Synchronous reporter
 | `'R'`   | Asynchronous reporter
+| `'b'`   | Synchronous boolean
 | `'h'`   | Hat block (synchronous, returns boolean, true = run stack)
 
 Each block argument is identified by a `%` character and the character following it specifies the type.  The types are: `%n` for number, `%s` for string, and `%m` for menu.  Menus also identify which menu to use with a period and the name of the menu like this: `%m.menuName`.
