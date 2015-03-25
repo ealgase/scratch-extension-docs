@@ -1,0 +1,10 @@
+ScratchExtensions.loadExternalJS("https://rawgit.com/ealgase/scratch-extension-docs/master/src/alarm_extension.js");
+ScratchExtensions.loadExternalJS("https://rawgit.com/ealgase/scratch-extension-docs/master/src/browser_extension.js");
+ScratchExtensions.loadExternalJS("https://rawgit.com/ealgase/scratch-extension-docs/master/src/localstorage_extension.js");
+ScratchExtensions.loadExternalJS("https://rawgit.com/ealgase/scratch-extension-docs/master/src/power_extension.js");
+ScratchExtensions.loadExternalJS("https://rawgit.com/ealgase/scratch-extension-docs/master/src/random_wait_extension.js");
+ScratchExtensions.loadExternalJS("https://rawgit.com/ealgase/scratch-extension-docs/master/src/speech_to_text_extension.js");
+ScratchExtensions.loadExternalJS("https://rawgit.com/ealgase/scratch-extension-docs/master/src/text_to_speech_extension.js");
+ScratchExtensions.loadExternalJS("https://rawgit.com/ealgase/scratch-extension-docs/master/src/text_to_speech_simple_extension.js");
+ScratchExtensions.loadExternalJS("https://rawgit.com/ealgase/scratch-extension-docs/master/src/weather_extension.js");
+consle.log('Load complete!');
