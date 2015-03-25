@@ -32,11 +32,11 @@
 
     var descriptor = {
         blocks: [
-            [' ', 'alert %s', 'alert', ''],
-            ['r', 'confirm %s', 'confirm', 'Are you sure?'],
+            [' ', 'alert %s', 'alert', 'Hello!'],
+            ['b', 'confirm %s', 'confirm', 'Are you sure?'],
             ['r', 'ask %s', 'ask', 'How are you?'],
             [' ', 'set window title to %s', 'setTitle', 'title'],
-            [' ', 'open tab with %s', 'openTab', 'https://twitter.com/scratchteam']
+            [' ', 'open tab with url %s', 'openTab', 'https://google.com']
         ]
     };
 
