@@ -7,4 +7,6 @@ ScratchExtensions.loadExternalJS("https://rawgit.com/ealgase/scratch-extension-d
 ScratchExtensions.loadExternalJS("https://rawgit.com/ealgase/scratch-extension-docs/master/src/text_to_speech_extension.js");
 ScratchExtensions.loadExternalJS("https://rawgit.com/ealgase/scratch-extension-docs/master/src/text_to_speech_simple_extension.js");
 ScratchExtensions.loadExternalJS("https://rawgit.com/ealgase/scratch-extension-docs/master/src/weather_extension.js");
+ScratchExtensions.loadExternalJS("https://rawgit.com/ealgase/scratch-extension-docs/master/src/hardware-extensions/joystickExtension.js");
+ScratchExtensions.loadExternalJS("https://rawgit.com/ealgase/scratch-extension-docs/master/src/hardware-extensions/picoExtension.js");
 consle.log('Load complete!');
