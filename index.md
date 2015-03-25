@@ -13,6 +13,7 @@ layout: default
       1. [Command blocks that wait](#command-blocks-that-wait)
       1. [Reporter blocks](#reporter-blocks)
       1. [Reporter blocks that wait](#reporter-blocks-that-wait)
+      1. [Boolean blocks](#boolean-blocks)
       1. [Hat blocks](#hat-blocks)
    1. [The Extension Descriptor](#the-extension-descriptor)
       1. [Blocks](#blocks)
@@ -179,6 +180,41 @@ Blocks can also return values, and they are called _reporter_ blocks. The corres
         blocks: [
             // Block type, block name, function name, param1 default value, param2 default value
             ['r', '%n ^ %n', 'power', 2, 3],
+        ]
+    };
+
+    // Register the extension
+    ScratchExtensions.register('Sample extension', descriptor, ext);
+})({});
+### Boolean blocks
+
+Blocks can also return true or false, and they are called _boolean_ blocks. The corresponding JavaScript function for a boolean block needs to return a value, as shown in the example below. Note that a boolean block that does not return anything is false.
+
+```javascript
+(function(ext) {
+    // Cleanup function when the extension is unloaded
+    ext._shutdown = function() {};
+
+    // Status reporting code
+    // Use this to report missing hardware, plugin or unsupported browser
+    ext._getStatus = function() {
+        return {status: 2, msg: 'Ready'};
+    };
+
+    ext.true = function() {
+        return true;
+    };
+
+    ext.false = function() {
+        return false;
+    };
+
+    // Block and block menu descriptions
+    var descriptor = {
+        blocks: [
+            // Block type, block name, function name, param1 default value, param2 default value
+            ['b', 'true', 'true'],
+            ['b', 'false', 'false'],
         ]
     };
 
