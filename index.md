@@ -186,6 +186,7 @@ Blocks can also return values, and they are called _reporter_ blocks. The corres
     // Register the extension
     ScratchExtensions.register('Sample extension', descriptor, ext);
 })({});
+```
 ### Boolean blocks
 
 Blocks can also return true or false, and they are called _boolean_ blocks. The corresponding JavaScript function for a boolean block needs to return a value, as shown in the example below. Note that a boolean block that does not return anything is false.
