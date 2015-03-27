@@ -187,42 +187,6 @@ Blocks can also return values, and they are called _reporter_ blocks. The corres
     ScratchExtensions.register('Sample extension', descriptor, ext);
 })({});
 ```
-### Boolean blocks
-
-Blocks can also return true or false, and they are called _boolean_ blocks. The corresponding JavaScript function for a boolean block needs to return a value, as shown in the example below. Note that a boolean block that does not return anything is false.
-
-```javascript
-(function(ext) {
-    // Cleanup function when the extension is unloaded
-    ext._shutdown = function() {};
-
-    // Status reporting code
-    // Use this to report missing hardware, plugin or unsupported browser
-    ext._getStatus = function() {
-        return {status: 2, msg: 'Ready'};
-    };
-
-    ext.true = function() {
-        return true;
-    };
-
-    ext.false = function() {
-        return false;
-    };
-
-    // Block and block menu descriptions
-    var descriptor = {
-        blocks: [
-            // Block type, block name, function name, param1 default value, param2 default value
-            ['b', 'true', 'true'],
-            ['b', 'false', 'false'],
-        ]
-    };
-
-    // Register the extension
-    ScratchExtensions.register('Sample extension', descriptor, ext);
-})({});
-```
 
 ### Reporter blocks that wait
 
@@ -261,6 +225,42 @@ One common use-case for reporter blocks is getting data from online web-services
 
     // Register the extension
     ScratchExtensions.register('Weather extension', descriptor, ext);
+})({});
+```
+### Boolean blocks
+
+Blocks can also return true or false, and they are called _boolean_ blocks. The corresponding JavaScript function for a boolean block needs to return a value, as shown in the example below. Note that a boolean block that does not return anything is false.
+
+```javascript
+(function(ext) {
+    // Cleanup function when the extension is unloaded
+    ext._shutdown = function() {};
+
+    // Status reporting code
+    // Use this to report missing hardware, plugin or unsupported browser
+    ext._getStatus = function() {
+        return {status: 2, msg: 'Ready'};
+    };
+
+    ext.true = function() {
+        return true;
+    };
+
+    ext.false = function() {
+        return false;
+    };
+
+    // Block and block menu descriptions
+    var descriptor = {
+        blocks: [
+            // Block type, block name, function name, param1 default value, param2 default value
+            ['b', 'true', 'true'],
+            ['b', 'false', 'false'],
+        ]
+    };
+
+    // Register the extension
+    ScratchExtensions.register('Sample extension', descriptor, ext);
 })({});
 ```
 
@@ -349,6 +349,7 @@ The full list of block types available to an extension is as follows. Note that 
 | `'r'`   | Synchronous reporter
 | `'R'`   | Asynchronous reporter
 | `'b'`   | Synchronous boolean
+| `'c'`   | C block (note that you can't run the blocks inside)
 | `'h'`   | Hat block (synchronous, returns boolean, true = run stack)
 
 Each block argument is identified by a `%` character and the character following it specifies the type.  The types are: `%n` for number, `%s` for string, and `%m` for menu.  Menus also identify which menu to use with a period and the name of the menu like this: `%m.menuName`.
